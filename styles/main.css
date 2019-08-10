@@ -1,0 +1,16 @@
+h1 {
+    background: skyblue;
+}
+h2 {
+    background: coral;
+}
+
+footer {
+    margin-top: 300px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        background: crimson;
+    }
+  }
