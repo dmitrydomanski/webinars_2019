@@ -1,31 +1,36 @@
-p, a {
-    font-size: 20px;
-}
+@import url(small.css);
 
-a {
-    display: block;
-}
-
-.danger.example {
-    font-size: 30px;
-}
-
-p#extreme {
-    font-size: 24px;
-}
-
-.example {
-    color: darkblue;
-}
-
-#example {
-    color: green;
+p span {
+    /* font-size: 24px; */
+    color: violet;
 }
 
 .danger {
-    border: solid 1px red;
+    color: red;
 }
 
-#extreme {
-    color: red;
+.info {
+    color: green
+}
+
+span[custom='larger'] {
+    font-size: larger;
+    color: black;
+}
+
+button:hover{
+    transform: scale(2)
+}
+
+button:active {
+    background: skyblue;
+}
+
+button:disabled {
+    background: darkgrey;
+    transform: none;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: coral;
 }
