@@ -1,16 +1,31 @@
-h1 {
-    background: skyblue;
-}
-h2 {
-    background: coral;
+p, a {
+    font-size: 20px;
 }
 
-footer {
-    margin-top: 300px;
+a {
+    display: block;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    h1 {
-        background: crimson;
-    }
-  }
+.danger.example {
+    font-size: 30px;
+}
+
+p#extreme {
+    font-size: 24px;
+}
+
+.example {
+    color: darkblue;
+}
+
+#example {
+    color: green;
+}
+
+.danger {
+    border: solid 1px red;
+}
+
+#extreme {
+    color: red;
+}
