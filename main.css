@@ -1,3 +1,8 @@
+
+body {
+    --crimson-border: solid 1px crimson;
+}
+
 h1, h2, h3 {
     text-align: center;
 }
@@ -51,8 +56,9 @@ body {
 
 .wrapper {
     height: 300px;
-    border: solid 1px crimson;
+    border: var(--crimson-border);
 }
+
 .relative {
     position: relative;
 }
@@ -67,12 +73,26 @@ body {
     justify-content: center;
 }
 
-.flex-wrapper {
-    height: 300px;
-
+.flex-container {
+    min-height: 300px;
+    display: flex;
+    border: var(--crimson-border)
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
 
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+.padding {
+    padding: 20px;
+}
 
 footer {
     margin-top: 300px;
