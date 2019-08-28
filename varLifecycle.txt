@@ -1,0 +1,10 @@
+function hoist () {
+  var message;
+  console.log(message)
+  message = 'Hosited'
+}
+
+hoist() // Output: undefined
+
+
+
