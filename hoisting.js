@@ -1,53 +1,31 @@
-// var a // declaration
-
-// a = 100 // assignment/itialization
-
-// console.log(a + 30) // usage
-
-// console.log(a)
-
-// a = 100;
-
-// function checkOne (one) {
-//   if (one) {
-//     console.log('true')
-//   } else {
-//     console.log('false')
-//   }
-// }
-
-// function hoist () {
-//   a = 20
-//   var b = 100
-// }
-
-// var c = 150
-
-// hoist()
-
-// console.log('a: ', a)
-// console.log('b: ', b)
-
+// let hoist = 'Hoisted'
 // console.log(hoist)
-// var hoist = 'the variable has been hoisted'
 
-function hoist () {
-  var message = 'Hosited'
-  console.log(message)
+// let & const
+
+// let: can be reassigned, block-scoped
+// const: can not be reassigned, function-scoped
+
+// constant = 1
+// console.log(constant)
+// let constant = 'constant'
+
+// function constExample () {
+//   console.log(constant)
+//   constant = 1
+//   const constant = 'constant'
+// }
+
+// constExample()
+
+function blockedScope () {
+  const array = [1, 2, 3]
+  const a = 3
+  for (let item of array) {
+    let blocked = item * 2
+    console.log(blocked, item)
+  }
+  console.log(a)
 }
 
-hoist()
-
-// checkOne('')
-
-// checkOne(one)
-
-// var checkOne = function (one) {
-//   if (one) {
-//     console.log('true')
-//   } else {
-//     console.log('false')
-//   }
-// }
-
-// var a = 100
+blockedScope()
