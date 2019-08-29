@@ -1,5 +1,7 @@
-var hoist;
-console.log(hoist);
+var funcExpression;
+function funcDeclaration (params) {
+  console.log(params)
+}
 
 
 

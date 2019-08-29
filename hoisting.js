@@ -1,31 +1,32 @@
-// let hoist = 'Hoisted'
-// console.log(hoist)
+// funcDeclaration('params')
+// funcExpression('more params')
 
-// let & const
-
-// let: can be reassigned, block-scoped
-// const: can not be reassigned, function-scoped
-
-// constant = 1
-// console.log(constant)
-// let constant = 'constant'
-
-// function constExample () {
-//   console.log(constant)
-//   constant = 1
-//   const constant = 'constant'
+// Function declaration
+// function funcDeclaration (params) {
+//   console.log(params)
 // }
 
-// constExample()
+// Function expression
+// let funcExpression = function (params) {
+//   console.log(params)
+// }
 
-function blockedScope () {
-  const array = [1, 2, 3]
-  const a = 3
-  for (let item of array) {
-    let blocked = item * 2
-    console.log(blocked, item)
-  }
-  console.log(a)
+var double = 2 //assigment
+
+function double (num) {
+  return num * 2
 }
 
-blockedScope()
+// Variable assignment over function declaration
+// console.log(typeof double)
+
+var triple // declaration
+
+function triple (num) {
+    return num * 3
+  }
+
+// Function declaration over variable declaration
+console.log(typeof triple)
+
+
