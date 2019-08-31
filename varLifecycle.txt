@@ -1,7 +1,0 @@
-var funcExpression;
-function funcDeclaration (params) {
-  console.log(params)
-}
-
-
-
