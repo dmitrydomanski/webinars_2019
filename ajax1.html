@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recieving text file</title>
+</head>
+<body>
+    <button id="button">Get text file</button>
+    <div id="text"></div>
+    <script>
+        // create event listener
+        document.getElementById('button').addEventListener('click', loadText)
+
+        function loadText(){
+            // create xhr object
+            const xhr = new XMLHttpRequest();
+            // console.log(xhr)
+            xhr.open('GET', 'sample.txt', true)
+            // console.log(`READY STATE: ${xhr.readyState}`);
+            xhr.onload = function(){
+                if (this.status == 200){
+                    document.getElementById('text').innerHTML = this.responseText;
+                }
+            }
+
+            xhr.onprogress = function(){
+                // show loader
+            }
+
+            xhr.onerror = function() {
+                // handle error
+            }
+            // xhr.onreadystatechange = function(){
+            // console.log(`READY STATE: ${xhr.readyState}`);
+            //     if(this.readyState == 4 && this.status == 200){
+            //         console.log(this.responseText)
+            //     }
+            // }
+            // readyState values
+            // 0 - request not initialized
+            // 1 - connection established
+            // 2 - request recieved
+            // 3 - request processing
+            // 4 - response is ready
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
